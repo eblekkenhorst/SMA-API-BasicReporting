@@ -7,6 +7,11 @@ The API's sandbox swagger can be found here: https://sandbox.smaapis.de/basicrep
 I'm not a professional developer so there's plenty room for improvement.
 
 The script can get PV generation for your plant for a year, month, week or day. The current daily generation can be automatically uploaded to pvoutput.org.
+Edit config.ini with your API credentials and pvoutput.org API key (if applicable).
+
+Know issues:
+- The script assumes you have a single plant. It chooses the first one in the list.
+
 ```
 usage: sma-basicreporting [-h] [-v] [-c CONFIGFILE] (-y PVYEAR | -m PVMONTH | -w PVWEEK | -d PVDAY | -t | -T)
 

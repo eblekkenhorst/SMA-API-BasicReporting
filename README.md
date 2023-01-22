@@ -5,6 +5,8 @@ A simple python script that implements some of the BasciReporting's PlantMonitor
 The API's sandbox swagger can be found here: https://sandbox.smaapis.de/basicreporting/index.html
 
 I'm not a professional developer so there's plenty room for improvement.
+
+The script can get PV generation for your plant for a year, month, week or day. The current daily generation can be automatically uploaded to pvoutput.org.
 ```
 usage: sma-basicreporting [-h] [-v] [-c CONFIGFILE] (-y PVYEAR | -m PVMONTH | -w PVWEEK | -d PVDAY | -t | -T)
 

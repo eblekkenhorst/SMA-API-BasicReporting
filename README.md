@@ -16,16 +16,15 @@ Know issues:
 usage: sma-basicreporting [-h] [-v] [-c CONFIGFILE] (-y PVYEAR | -m PVMONTH | -w PVWEEK | -d PVDAY | -t | -T)
 
 options:
-  -h, --help            show this help message and exit
-  -v, --version         show program's version number and exit
-  -c CONFIGFILE, --config CONFIGFILE
-                        Configuration file
-  -y PVYEAR             Get PV generation for a year: YYYY
-  -m PVMONTH            Get PV generation for a month: YYYY-MM
-  -w PVWEEK             Get PV generation for a week: YYYY-MM-DD
-  -d PVDAY              Get PV generation for a day: YYYY-MM-DD
-  -t                    Get PV generation for today
-  -T                    Get PV generation for today and upload to pvoutput.org
+  -h, --help     show this help message and exit
+  -v, --version  show program's version number and exit
+  -c CONFIGFILE  Configuration file. Defaults to 'config.ini'.
+  -y PVYEAR      Get PV generation for a year: YYYY
+  -m PVMONTH     Get PV generation for a month: YYYY-MM
+  -w PVWEEK      Get PV generation for a week: YYYY-MM-DD
+  -d PVDAY       Get PV generation for a day: YYYY-MM-DD
+  -t             Get PV generation for today
+  -T             Get PV generation for today and upload to pvoutput.org
 ```
 ```
 > SMA-API-BasicReporting.py -t

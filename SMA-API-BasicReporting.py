@@ -208,15 +208,15 @@ class BasicReporting:
 
 # Read command line args
 parser = argparse.ArgumentParser(prog=progname)
-parser.add_argument('-v', '--version', action='version', version='%(prog)s ' + version)
-parser.add_argument('-c', action='store', dest='configFile', default='config.ini', required=False, help="Configuration file. Defaults to 'config.ini'.")
+parser.add_argument('-v', '--version', action='version', version='%(prog)s ' + version, help="show program's version number")
+parser.add_argument('-c', action='store', dest='configFile', default='config.ini', required=False, help="configuration file which defaults to 'config.ini' if none provided")
 group = parser.add_mutually_exclusive_group(required=True)
-group.add_argument("-y", action='store', dest='pvYear', type=str, default=False, help="Get PV generation for a year: YYYY")
-group.add_argument("-m", action='store', dest='pvMonth', type=str, default=False, help="Get PV generation for a month: YYYY-MM")
-group.add_argument("-w", action='store', dest='pvWeek', type=str, default=False, help="Get PV generation for a week: YYYY-MM-DD")
-group.add_argument("-d", action='store', dest='pvDay', type=str, default=False, help="Get PV generation for a day: YYYY-MM-DD")
-group.add_argument("-t", action='store_true', dest='pvToday', default=False, help="Get PV generation for today")
-group.add_argument("-T", action='store_true', dest='pvoutToday', default=False, help="Get PV generation for today and upload to pvoutput.org")
+group.add_argument("-y", action='store', dest='pvYear', type=str, default=False, help="get PV generation for a year: YYYY")
+group.add_argument("-m", action='store', dest='pvMonth', type=str, default=False, help="get PV generation for a month: YYYY-MM")
+group.add_argument("-w", action='store', dest='pvWeek', type=str, default=False, help="get PV generation for a week: YYYY-MM-DD")
+group.add_argument("-d", action='store', dest='pvDay', type=str, default=False, help="get PV generation for a day: YYYY-MM-DD")
+group.add_argument("-t", action='store_true', dest='pvToday', default=False, help="get PV generation for today")
+group.add_argument("-T", action='store_true', dest='pvoutToday', default=False, help="get PV generation for today and upload to pvoutput.org")
 args = parser.parse_args()
 
 # Main program logic follows:

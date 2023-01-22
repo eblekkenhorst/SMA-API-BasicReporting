@@ -8,7 +8,7 @@ I'm not a professional developer so there's plenty room for improvement.
 
 The script can get PV generation for your plant for a year, month, week or day. See the SMA API documentation for the API's limitations. The current daily generation can be automatically uploaded to pvoutput.org. Add to crontab for easy automation.
 
-It implements the token init and refresh requests and starts the authorisation request flow.
+It implements the token init and refresh requests and starts the authorisation consent request flow.
 Add your SMA API credentials and pvoutput.org API key (if applicable) to the configuration file.
 
 Known issues:

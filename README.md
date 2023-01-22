@@ -1,26 +1,31 @@
 # SMA-API-BasicReporting
 Python script for using the new SMA BasicReporting API
 
-A simple python script that implements some of the BasciReporting's PlantMonitoring functionality of the new SMA API. Follow the developers guide to get access on https://developer.sma.de/sma-apis.html.
+A simple python script that implements some of the BasciReporting's (limited, but free) PlantMonitoring functionality of the new SMA API. Follow the developers guide to get access on https://developer.sma.de/sma-apis.html.
 The API's sandbox swagger can be found here: https://sandbox.smaapis.de/basicreporting/index.html
 
 I'm not a professional developer so there's plenty room for improvement.
 
-The script can get PV generation for your plant for a year, month, week or day. The current daily generation can be automatically uploaded to pvoutput.org.
+The script can get PV generation for your plant for a year, month, week or day. See the SMA API documentation for its limitations. The current daily generation can be automatically uploaded to pvoutput.org. Add to crontab for easy automation.
+Add your API credentials and pvoutput.org API key (if applicable) to the configuration file.
+
+Known issues:
+- The script assumes you have a single plant. It chooses the first one in the list.
+- Error handling can be improved.
+
 ```
 usage: sma-basicreporting [-h] [-v] [-c CONFIGFILE] (-y PVYEAR | -m PVMONTH | -w PVWEEK | -d PVDAY | -t | -T)
 
 options:
-  -h, --help            show this help message and exit
-  -v, --version         show program's version number and exit
-  -c CONFIGFILE, --config CONFIGFILE
-                        Configuration file
-  -y PVYEAR             Get PV generation for a year: YYYY
-  -m PVMONTH            Get PV generation for a month: YYYY-MM
-  -w PVWEEK             Get PV generation for a week: YYYY-MM-DD
-  -d PVDAY              Get PV generation for a day: YYYY-MM-DD
-  -t                    Get PV generation for today
-  -T                    Get PV generation for today and upload to pvoutput.org
+  -h, --help     show this help message and exit
+  -v, --version  show program's version number
+  -c CONFIGFILE  configuration file which defaults to 'config.ini' if none provided
+  -y PVYEAR      get PV generation for a year: YYYY
+  -m PVMONTH     get PV generation for a month: YYYY-MM
+  -w PVWEEK      get PV generation for a week: YYYY-MM-DD
+  -d PVDAY       get PV generation for a day: YYYY-MM-DD
+  -t             get PV generation for today
+  -T             get PV generation for today and upload to pvoutput.org
 ```
 ```
 > SMA-API-BasicReporting.py -t

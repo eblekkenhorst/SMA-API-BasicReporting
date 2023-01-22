@@ -22,3 +22,11 @@ options:
   -t                    Get PV generation for today
   -T                    Get PV generation for today and upload to pvoutput.org
 ```
+```
+> SMA-API-BasicReporting.py -t
+2023-01-22;532.0
+```
+```
+> SMA-API-BasicReporting.py -t
+2023-01-22;532.0
+```

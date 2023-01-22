@@ -186,7 +186,7 @@ class BasicReporting:
       'Content-Type': 'application/x-www-form-urlencoded'
     }
     response = requests.request("POST", url, headers=headers, data=payload)
-    if response.status_code != 200:
+    if response.status_code != 200 and response.status_code != 204:
         print(response.text)
         raise ValueError('API logout returned HTTP code: ' + str(response.status_code))
 

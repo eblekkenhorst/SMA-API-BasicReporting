@@ -209,7 +209,7 @@ class BasicReporting:
 # Read command line args
 parser = argparse.ArgumentParser(prog=progname)
 parser.add_argument('-v', '--version', action='version', version='%(prog)s ' + version)
-parser.add_argument('-c', '--config', action='store', dest='configFile', default='config.ini', required=False, help="Configuration file")
+parser.add_argument('-c', action='store', dest='configFile', default='config.ini', required=False, help="Configuration file. Defaults to 'config.ini'.")
 group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument("-y", action='store', dest='pvYear', type=str, default=False, help="Get PV generation for a year: YYYY")
 group.add_argument("-m", action='store', dest='pvMonth', type=str, default=False, help="Get PV generation for a month: YYYY-MM")

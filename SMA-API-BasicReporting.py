@@ -3,7 +3,7 @@ from datetime import datetime
 from configparser import ConfigParser
 import os.path
 
-progname='sma-basicreporting'
+progname='sma-api-basicreporting'
 version = "0.04"
 
 class BasicReporting:

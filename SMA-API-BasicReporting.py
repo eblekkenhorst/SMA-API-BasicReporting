@@ -17,7 +17,6 @@ class BasicReporting:
     exists = os.path.exists(config_filepath)
     config = None
     if exists:
-      #print("config.ini file found at ", config_filepath)
       config = ConfigParser()
       config.read(config_filepath)
       # Retrieve config details
@@ -249,7 +248,7 @@ if __name__ == '__main__':
         pvSet = pvOutput["set"]
         for x in pvSet:
           time = x["time"]
-          print(time + ";" + str(x["pvGeneration"]))
+          print(time[0:10] + ";" + str(x["pvGeneration"]))
       elif args.pvDay:
         pvOutput =  myBasicReporting.PVgeneration_day(args.pvDay)
         pvSet = pvOutput["set"]

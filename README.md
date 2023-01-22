@@ -5,7 +5,7 @@ A simple python script that implements some of the BasciReporting's PlantMonitor
 The API's sandbox swagger can be found here: https://sandbox.smaapis.de/basicreporting/index.html
 
 I'm not a professional developer so there's plenty room for improvement.
-
+```
 usage: sma-basicreporting [-h] [-v] [-c CONFIGFILE] (-y PVYEAR | -m PVMONTH | -w PVWEEK | -d PVDAY | -t | -T)
 
 options:
@@ -19,3 +19,4 @@ options:
   -d PVDAY              Get PV generation for a day: YYYY-MM-DD
   -t                    Get PV generation for today
   -T                    Get PV generation for today and upload to pvoutput.org
+```

@@ -16,7 +16,7 @@ Known issues:
 - Error handling can be improved.
 
 ```
-usage: sma-basicreporting [-h] [-v] [-c CONFIGFILE] (-y PVYEAR | -m PVMONTH | -w PVWEEK | -d PVDAY | -t | -T)
+usage: sma-api-basicreporting [-h] [-v] [-c CONFIGFILE] (-y PVYEAR | -m PVMONTH | -w PVWEEK | -d PVDAY | -t | -T)
 
 options:
   -h, --help     show this help message and exit

@@ -4,7 +4,7 @@ from configparser import ConfigParser
 import os.path
 
 progname='sma-basicreporting'
-version = "0.03"
+version = "0.04"
 
 class BasicReporting:
   def __init__(self, version):

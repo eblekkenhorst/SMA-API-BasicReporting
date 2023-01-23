@@ -248,7 +248,7 @@ if __name__ == '__main__':
         pvSet = pvOutput["set"]
         for x in pvSet:
           time = x["time"]
-          print(time[0:10] + ";" + str(x["pvGeneration"]))
+          print(time + ";" + str(x["pvGeneration"]))
       elif args.pvDay:
         pvOutput =  myBasicReporting.PVgeneration_day(args.pvDay)
         pvSet = pvOutput["set"]

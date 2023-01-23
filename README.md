@@ -1,7 +1,7 @@
 # SMA-API-BasicReporting
-Python script for using the new SMA BasicReporting API
+Python3 script for using the new SMA BasicReporting API
 
-A simple python script that implements some of the BasciReporting's (limited, but free) PlantMonitoring functionality of the new SMA API. Follow the developers guide to get access on https://developer.sma.de/sma-apis.html.
+A simple python3 script that implements some of the BasciReporting's (limited, but free) PlantMonitoring functionality of the new SMA API. Follow the developers guide to get access on https://developer.sma.de/sma-apis.html.
 The API's sandbox swagger can be found here: https://sandbox.smaapis.de/basicreporting/index.html
 
 I'm not a professional developer so there's plenty room for improvement.
@@ -31,12 +31,12 @@ options:
 ```
 Today:
 ```
-> SMA-API-BasicReporting.py -t
+> python3 SMA-API-BasicReporting.py -t
 2023-01-22;532.0
 ```
 A full week:
 ```
-> SMA-API-BasicReporting.py -w 2022-12-25
+> python3 SMA-API-BasicReporting.py -w 2022-12-25
 2022-12-25;11.0
 2022-12-25;1.0
 2022-12-25;36.0
@@ -92,7 +92,7 @@ A full week:
 ```
 A month:
 ```
-> SMA-API-BasicReporting.py -m 2022-12 
+> python3 SMA-API-BasicReporting.py -m 2022-12 
 2022-12-01;1917.0
 2022-12-02;423.0
 2022-12-03;339.0
@@ -127,7 +127,7 @@ A month:
 ```
 A year:
 ```
-> SMA-API-BasicReporting.py -y 2022
+> python3 SMA-API-BasicReporting.py -y 2022
 2022-01-01;27867.0
 2022-02-01;69995.0
 2022-03-01;203735.0

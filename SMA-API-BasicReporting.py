@@ -79,9 +79,13 @@ class BasicReporting:
       'authorization': self.bearerToken
     }
     response = requests.request("POST", url, headers=headers, data=payload)
-    if response.status_code != 200 and response.status_code != 201:
-        print(response.text)
-        raise ValueError('Consent init returned HTTP code: ' + str(response.status_code))
+    if response.status_code in (200, 201):
+        return
+    # HTTP 400 with this message means consent was already granted earlier; not an error
+    if response.status_code == 400 and 'already granted' in response.text:
+        return
+    print(response.text)
+    raise ValueError('Consent init returned HTTP code: ' + str(response.status_code))
 
   def consent_status(self):
     # Step 4 - BC Auth Status
